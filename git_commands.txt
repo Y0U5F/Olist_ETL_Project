@@ -1,0 +1,38 @@
+# ===== GIT COMMANDS =====
+
+# 1. Initialize the repository
+git init
+# Explanation: Creates a new Git repository in the current directory.
+
+# 2. Stage all files
+git add .
+# Explanation: Adds all files in the current directory and its subdirectories to the staging area.
+
+# 3. Create an initial commit with a clear, concise, and informative commit message
+git commit -m "feat: Implement ELT pipeline for Olist data"
+# Explanation: Creates a new commit with the staged changes.
+#   - "feat": Indicates that this commit introduces a new feature.
+#   - "Implement ELT pipeline for Olist data": A brief description of the commit's purpose.
+#   - Adhering to conventional commits (https://www.conventionalcommits.org/en/v1.0.0/) helps automate changelog generation and improves commit message readability.
+
+# 4. Create a new GitHub repository (via the GitHub CLI or web interface)
+#   - Follow the instructions on GitHub to create a new repository.
+#   - Copy the repository URL (e.g., https://github.com/Y0U5F/Olist_ETL_Project.git).
+
+# 5. Link the local repository to the remote repository
+git remote add origin https://github.com/Y0U5F/Olist_ETL_Project.git
+# Explanation: Adds a remote repository named "origin" to your local Git repository.
+
+# 6. Push the code to the `main` branch
+git branch -M main
+# Explanation: Renames the current branch to "main".
+git push -u origin main
+# Explanation: Pushes the code to the remote repository's "main" branch.
+#   - "-u": Sets the upstream branch for future pushes and pulls.
+
+# 7. Add meaningful tags (e.g., v1.0.0) to mark releases
+git tag -a v1.0.0 -m "Release version 1.0.0"
+# Explanation: Creates a new tag named "v1.0.0" with a message.
+git push origin v1.0.0
+# Explanation: Pushes the tag to the remote repository.
+#   - Tagging is important for marking releases and creating stable versions of your code.

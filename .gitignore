@@ -1,0 +1,133 @@
+# ===== OLIST E-COMMERCE DATA PIPELINE .GITIGNORE =====
+# Comprehensive .gitignore for Data Engineering Project
+# Technologies: Python, Airflow, dbt, Snowflake, Docker, Power BI
+# Developer: Yousef Soliman
+
+# Explanation: This file specifies intentionally untracked files that Git should ignore.
+# It helps prevent sensitive information and build artifacts from being committed to the repository.
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+# Explanation: Ignore Python bytecode and optimized files.
+
+# C extensions
+*.so
+# Explanation: Ignore compiled C extensions.
+
+# Distribution / packaging
+.Python
+env/
+venv/
+ENV/
+dist/
+build/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.whl
+MANIFEST
+# Explanation: Ignore distribution and packaging artifacts.
+
+# PyInstaller
+#  Usually these files are written to the dist folder...
+#  but make sure to ignore them if they're lying around
+*.manifest
+*.spec
+# Explanation: Ignore PyInstaller-related files.
+
+# Compiled source #
+######################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+# Explanation: Ignore compiled source code files.
+
+# Packages #
+############
+# It's better to unpack these files and commit the code
+# rather than committing the package files themselves
+*.7z
+*.apk
+*.bz2
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.tar.bz2
+*.tar.gz
+*.zip
+# Explanation: Ignore package files.
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+*.sqlite3
+*.bak
+*.tmp
+# Explanation: Ignore log files, SQL dumps, and temporary files.
+
+# OS generated files #
+######################
+.DS_Store
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+# Explanation: Ignore OS-specific files.
+
+# JetBrains IDE #
+######################
+.idea/
+*.iws
+*.ipr
+*.iml
+# Explanation: Ignore JetBrains IDE project files.
+
+# VS Code #
+######################
+.vscode/
+# Explanation: Ignore VS Code settings and workspace files.
+
+# dbt #
+######################
+dbt_packages/
+target/
+dbt_modules/
+# Explanation: Ignore dbt packages, target directory, and modules.
+
+# Airflow #
+######################
+airflow.cfg
+airflow-webserver.pid
+airflow-scheduler.pid
+airflow-worker.pid
+# Explanation: Ignore Airflow configuration and PID files.
+
+# Snowflake #
+######################
+snowflake_credentials.json
+# Explanation: Ignore Snowflake credentials file.
+
+# Other #
+######################
+.env
+# Explanation: Ignore .env files containing sensitive environment variables.
+.DS_Store
+# Explanation: Ignore macOS-specific files.

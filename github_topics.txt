@@ -1,0 +1,11 @@
+data-engineering
+elt
+airflow
+dbt
+snowflake
+powerbi
+python
+ecommerce
+medallion-architecture
+data-pipeline
+docker

@@ -1,0 +1,59 @@
+# ~/olist_data_project/docker-compose.yml
+version: '3.8'
+
+services:
+  # PostgreSQL Database for source data
+  postgres_db:
+    image: postgres:13
+    container_name: olist_postgres
+    environment:
+      POSTGRES_USER: olist_user
+      POSTGRES_PASSWORD: olist_password
+      POSTGRES_DB: olist_source_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - olist_pg_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U olist_user -d olist_source_db"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Airflow with Olist ETL Project
+  airflow:
+    build: .
+    container_name: olist_airflow
+    environment:
+      - AIRFLOW__CORE__EXECUTOR=SequentialExecutor
+      - AIRFLOW__CORE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres/airflow
+      - AIRFLOW__CORE__FERNET_KEY=cryptFERNET_KEY_32_CHARS_OR_MORE
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./dbt_project:/opt/airflow/projects/Olist_ETL_Project/dbt_project
+      - ./scripts:/opt/airflow/projects/Olist_ETL_Project/scripts
+      - ./data:/opt/airflow/projects/Olist_ETL_Project/data
+    depends_on:
+      - postgres_db
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8080/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Snowflake doesn't run in Docker, but we can add a service for local testing
+  # Uncomment and configure if you have a local Snowflake instance
+  # snowflake:
+  #   image: snowflake/snowsql:latest
+  #   container_name: olist_snowflake
+  #   environment:
+  #     - SNOWFLAKE_ACCOUNT=${SNOWFLAKE_ACCOUNT}
+  #     - SNOWFLAKE_USER=${SNOWFLAKE_USER}
+  #     - SNOWFLAKE_PASSWORD=${SNOWFLAKE_PASSWORD}
+
+volumes:
+  olist_pg_data:
+  airflow_logs:

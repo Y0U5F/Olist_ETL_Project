@@ -1,0 +1,119 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Distribution / packaging
+.Python
+env/
+venv/
+ENV/
+dist/
+build/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+logs/
+*.log.*
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+.pytest_cache/
+
+# Documentation builds
+docs/_build/
+.readthedocs.yml
+
+# dbt
+dbt_packages/
+target/
+dbt_modules/
+*.dbt
+
+# Airflow
+airflow.cfg
+airflow-webserver.pid
+airflow-scheduler.pid
+airflow-worker.pid
+airflow-logs/
+
+# Node.js (if any)
+node_modules/
+npm-debug.log*
+
+# Testing
+.coverage
+.pytest_cache/
+.tox/
+htmlcov/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Secrets and config
+.env
+.env.local
+.env.*.local
+secrets/
+config/local/
+
+# Backup files
+*.bak
+*.backup
+
+# Compressed files
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Large data files (uncomment if you want to exclude data)
+# data/raw_data/*.csv
+# data/processed/*.parquet
+
+# Power BI files (if you want to exclude them from Docker)
+# power_bi/*.pbit
+# power_bi/*.pbix

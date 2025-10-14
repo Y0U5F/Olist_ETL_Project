@@ -1,0 +1,48 @@
+# `CHANGELOG.md` Management:
+
+*   **Purpose:** A `CHANGELOG.md` file is a human-readable log of changes made to a project over time. It serves as a historical record of releases, bug fixes, new features, and other significant updates. It's crucial for:
+    *   **Users:** To understand what has changed in each release and whether they need to update.
+    *   **Developers:** To track the evolution of the project and understand the context behind changes.
+    *   **Maintainers:** To communicate changes to the community and manage releases effectively.
+
+*   **Template Structure:**
+
+```
+# CHANGELOG
+
+## [Unreleased]
+(Changes that have not yet been released)
+
+### Added
+- New feature X.
+
+### Changed
+- Improved performance of Y.
+
+### Fixed
+- Resolved bug Z.
+
+## [v1.0.0] - 2024-07-01 (YYYY-MM-DD)
+
+### Added
+- Initial commit of the Olist E-commerce data pipeline project.
+- Implemented ELT architecture with Medallion layers (Bronze, Silver, Gold) in Snowflake.
+- Integrated Apache Airflow for pipeline orchestration.
+- Utilized dbt for data transformation and testing.
+- Created a Star Schema in the Gold layer for efficient reporting.
+- Included 26 automated dbt tests for data quality.
+- Dockerized the entire environment for easy deployment.
+- Created initial README.md and .gitignore files.
+```
+
+*   **Key Components:**
+    *   **Version Number:** Use semantic versioning (SemVer) to indicate the type of changes (e.g., major, minor, patch).
+    *   **Release Date:** Include the date of the release in YYYY-MM-DD format.
+    *   **Change Categories:** Use clear categories to group changes (e.g., Added, Changed, Fixed, Removed, Deprecated).
+    *   **Detailed Descriptions:** Provide concise but informative descriptions of each change.
+
+*   **Best Practices:**
+    *   **Keep it human-readable:** Write in clear and concise language that is easy to understand.
+    *   **Use a consistent format:** Follow a consistent structure for each release.
+    *   **Update it regularly:** Update the CHANGELOG with every release.
+    *   **Automate the process:** Consider using tools to automate the generation of CHANGELOG entries from commit messages (e.g., commitlint, husky).

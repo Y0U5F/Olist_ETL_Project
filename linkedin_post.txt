@@ -1,0 +1,7 @@
+Excited to share my latest data engineering project: an end-to-end data pipeline for Olist, a Brazilian e-commerce company! 🚀
+
+This project showcases a complete ELT architecture with Medallion layers in Snowflake, orchestrated by Apache Airflow and transformed using dbt. I extracted data from PostgreSQL and CSV files, built a star schema data warehouse, and implemented 26 automated dbt tests to ensure data quality.
+
+Key insights revealed 70% of Olist's revenue comes from Southeast Brazil, and delivery time significantly impacts customer satisfaction. The entire pipeline is containerized with Docker for easy deployment.
+
+Check out the GitHub repo for details and feel free to connect! #dataengineering #airflow #dbt #snowflake #elt #ecommerce #python #datascience #cloudcomputing #opensource

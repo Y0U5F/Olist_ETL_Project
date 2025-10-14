@@ -1,0 +1,17 @@
+# GitHub Profile Integration:
+
+1.  **Pin the repository:**
+    *   **Should I pin it?** Absolutely! Pinning this repository to the top of your GitHub profile is highly recommended.
+    *   **Why?** It ensures that visitors immediately see your most important and impressive work, increasing its visibility and impact.
+
+2.  **Update your GitHub profile README:**
+    *   Add a section in your GitHub profile README that links to this project and your portfolio at https://y0u5f.github.io/.
+    *   Example of effective linking strategies:
+
+```
+## Featured Projects
+
+-   **End-to-End Data Pipeline: The Olist E-commerce Project:** A complete data pipeline featuring Python, Airflow, dbt, Snowflake, and Power BI. [GitHub Repository](https://github.com/Y0U5F/Olist_ETL_Project) | [Portfolio](https://y0u5f.github.io/)
+```
+
+*   **Why?** This provides context and allows viewers to quickly navigate to the project repository and your portfolio for more information.

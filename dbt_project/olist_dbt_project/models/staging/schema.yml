@@ -1,0 +1,158 @@
+version: 2
+
+models:
+  - name: stg_customers
+    config:
+      quoting:
+        identifier: true
+        column: true
+    description: "Cleaned customer data"
+    columns:
+      - name: customer_id
+        description: "Unique customer identifier"
+        tests:
+          - unique
+          - not_null
+      - name: customer_unique_id
+        description: "Unique identifier for each customer"
+        tests:
+          - not_null
+      - name: customer_zip_code_prefix
+        description: "First five digits of the customer's zip code"
+        tests:
+          - not_null
+      - name: customer_city
+        description: "City where the customer resides"
+        tests:
+          - not_null
+      - name: customer_state
+        description: "State where the customer resides"
+        tests:
+          - not_null
+
+  - name: stg_orders
+    config:
+      quoting:
+        identifier: true
+        column: true
+    description: "Cleaned order data"
+    columns:
+      - name: order_id
+        description: "Unique order identifier"
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        description: "Foreign key to customers"
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_customers')
+                field: customer_id
+      - name: order_status
+        description: "Status of the order"
+        tests:
+          - not_null
+      - name: order_purchase_timestamp
+        description: "Timestamp of purchase"
+        tests:
+          - not_null
+      - name: order_approved_at
+        description: "Timestamp of payment approval"
+      - name: order_delivered_carrier_date
+        description: "Timestamp when order was handed to carrier"
+      - name: order_delivered_customer_date
+        description: "Timestamp when order was delivered to customer"
+      - name: order_estimated_delivery_date
+        description: "Estimated delivery date"
+
+  - name: stg_order_items
+    config:
+      quoting:
+        identifier: true
+        column: true
+    description: "Cleaned order line items"
+    columns:
+      - name: order_id
+        description: "Foreign key to orders"
+        tests:
+          - not_null
+      - name: order_item_id
+        description: "Sequential number identifying each item within an order"
+        tests:
+          - not_null
+      - name: product_id
+        description: "Foreign key to products"
+        tests:
+          - not_null
+      - name: seller_id
+        description: "Foreign key to sellers"
+        tests:
+          - not_null
+      - name: shipping_limit_date
+        description: "Seller's shipping limit date"
+        tests:
+          - not_null
+      - name: price
+        description: "Item price"
+        tests:
+          - not_null
+      - name: freight_value
+        description: "Shipping cost for the item"
+        tests:
+          - not_null
+
+  - name: stg_products
+    config:
+      quoting:
+        identifier: true
+        column: true
+    description: "Cleaned product catalog"
+    columns:
+      - name: product_id
+        description: "Unique identifier for each product"
+        tests:
+          - unique
+          - not_null
+      - name: product_category_name
+        description: "Category of the product"
+      - name: product_name_lenght
+        description: "Number of characters in the product's name"
+      - name: product_description_lenght
+        description: "Number of characters in the product's description"
+      - name: product_photos_qty
+        description: "Number of photos available for the product"
+      - name: product_weight_g
+        description: "Weight of the product in grams"
+      - name: product_length_cm
+        description: "Length of the product in centimeters"
+      - name: product_height_cm
+        description: "Height of the product in centimeters"
+      - name: product_width_cm
+        description: "Width of the product in centimeters"
+
+  - name: stg_sellers
+    config:
+      quoting:
+        identifier: true
+        column: true
+    description: "Cleaned seller data"
+    columns:
+      - name: seller_id
+        description: "Unique identifier for each seller"
+        tests:
+          - unique
+          - not_null
+      - name: seller_zip_code_prefix
+        description: "First five digits of the seller's zip code"
+        tests:
+          - not_null
+      - name: seller_city
+        description: "City where the seller is located"
+        tests:
+          - not_null
+      - name: seller_state
+        description: "State where the seller is located"
+        tests:
+          - not_null

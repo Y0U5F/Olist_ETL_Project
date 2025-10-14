@@ -1,0 +1,23 @@
+version: 2
+
+sources:
+  - name: bronze
+    database: PROJECT_DB
+    schema: BRONZE_RAW_DATA
+    description: "Raw data loaded from source systems"
+
+    # This is the key fix for the "invalid identifier" error
+    quoting:
+      identifier: true
+      column: true 
+
+    tables:
+      - name: RAW_CUSTOMERS
+      - name: RAW_GEOLOCATION
+      - name: RAW_ORDER_ITEMS
+      - name: RAW_ORDER_PAYMENTS
+      - name: RAW_ORDER_REVIEWS
+      - name: RAW_ORDERS
+      - name: RAW_PRODUCTS
+      - name: RAW_SELLERS
+      - name: RAW_PRODUCT_CATEGORY_NAME_TRANSLATION

@@ -1,0 +1,33 @@
+# ===== GOOD COMMIT MESSAGES =====
+
+# feat: Add dbt model for customer segmentation
+# Explanation: Clearly states the type of change (feature) and the specific component affected (dbt model for customer segmentation).
+
+# fix: Resolve bug in Airflow DAG causing data ingestion failures
+# Explanation: Clearly states the type of change (fix) and the specific issue resolved (bug in Airflow DAG).
+
+# refactor: Improve code structure in Python ingestion scripts
+# Explanation: Clearly states the type of change (refactor) and the area of the code that was improved (Python ingestion scripts).
+
+# docs: Update README with project architecture diagram
+# Explanation: Clearly states the type of change (documentation) and the specific documentation that was updated (README with architecture diagram).
+
+# chore: Update dependencies in requirements.txt
+# Explanation: Clearly states the type of change (chore) and the specific task performed (updating dependencies).
+
+# ===== BAD COMMIT MESSAGES =====
+
+# Fixed it
+# Explanation: Too vague and doesn't provide any context about what was fixed.
+
+# Updated code
+# Explanation: Doesn't explain what was updated or why.
+
+# Added stuff
+# Explanation: Doesn't provide any information about what was added.
+
+# Fixed bug
+# Explanation: Doesn't specify which bug was fixed or where it was located.
+
+# Refactor
+# Explanation: Doesn't explain what was refactored or why.
