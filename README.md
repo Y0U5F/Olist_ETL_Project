@@ -292,9 +292,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Yousef Soliman** - Data Engineer
 
-- 📧 [yousef.soliman@email.com](mailto:yousef.soliman@email.com)
-- 🐙 [GitHub Profile](https://github.com/Y0U5F)
-- 💼 [LinkedIn Profile](https://y0u5f.github.io/)
+- 📧 [yousef.soliman.de@gmail.com](mailto:yousef.soliman.de@gmail.com)
+- </> [GitHub Profile](https://github.com/Y0U5F)
+- 🇱 [LinkedIn Profile](https://www.linkedin.com/in/y0usefma7m0ud/)
+- 💼 [My Portfolio](https://y0u5f.github.io/)
 
 ---
 
