@@ -131,3 +131,33 @@ snowflake_credentials.json
 # Explanation: Ignore .env files containing sensitive environment variables.
 .DS_Store
 # Explanation: Ignore macOS-specific files.
+
+# Data Files (DO NOT UPLOAD)
+*.csv
+*.xlsx
+*.xls
+*.json
+data/
+raw_data/
+datasets/
+
+# Power BI Files
+*.pbix
+
+# Large files
+*.zip
+*.tar.gz
+*.rar
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+*.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db

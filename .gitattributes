@@ -1,0 +1,65 @@
+# Set default behavior to automatically normalize line endings
+* text=auto
+
+# Python files
+*.py text eol=lf
+*.pyx text eol=lf
+*.pyw text eol=lf
+
+# SQL files (dbt models)
+*.sql text eol=lf
+
+# YAML files
+*.yml text eol=lf
+*.yaml text eol=lf
+
+# Markdown files
+*.md text eol=lf
+
+# Configuration files
+*.cfg text eol=lf
+*.ini text eol=lf
+*.conf text eol=lf
+
+# Documentation files
+*.txt text eol=lf
+*.rst text eol=lf
+
+# Shell scripts
+*.sh text eol=lf
+
+# Dockerfile
+Dockerfile text eol=lf
+docker-compose*.yml text eol=lf
+
+# Jupyter Notebooks (if any)
+*.ipynb text eol=lf
+
+# Data files (treat as binary to avoid corruption)
+*.csv binary
+*.json binary
+*.parquet binary
+*.pbit binary
+
+# Image files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.svg binary
+*.ico binary
+
+# Archive files
+*.zip binary
+*.tar binary
+*.gz binary
+*.bz2 binary
+*.xz binary
+*.7z binary
+*.rar binary
+
+# PDF files
+*.pdf binary
+
+# Log files (for better diff viewing)
+*.log text eol=lf
